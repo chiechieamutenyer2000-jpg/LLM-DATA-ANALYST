@@ -11,6 +11,12 @@ from openai import OpenAI
 st.set_page_config(page_title="LLM Data Analyst", page_icon="📊", layout="wide")
 sns.set_theme(style="whitegrid")
 
+st.markdown(
+    "**Created by:** Festus Amutenya - 220006245 · Kennedy Hauwanga - 218205299 "
+    "| **Module:** Large Language Models  "
+    "| **Institution:** Your University Name"
+)
+
 # ------------------------------------------------------------------
 # CONFIG
 # ------------------------------------------------------------------
