@@ -12,9 +12,15 @@ st.set_page_config(page_title="LLM Data Analyst", page_icon="📊", layout="wide
 sns.set_theme(style="whitegrid")
 
 st.markdown(
-    "**Created by:** Festus Amutenya - 220006245 · Kennedy Hauwanga - 218205299 "
-    "| **Module:** Large Language Models  "
-    "| **Institution:** Your University Name"
+    """
+    <div style="padding:0.7rem 1rem; background:rgba(255,255,255,0.05);
+                border-left:3px solid #6c63ff; border-radius:4px; margin:0.5rem 0 1.5rem 0;">
+    <strong>Created by:</strong> Festus Amutenya (220006245) · Kennedy Hauwanga (218205299)<br>
+    <strong>Module:</strong> Large Language Models &nbsp;|&nbsp;
+    <strong>Institution:</strong> UNIVERSITY OF NAMIBIA
+    </div>
+    """,
+    unsafe_allow_html=True,
 )
 
 # ------------------------------------------------------------------
