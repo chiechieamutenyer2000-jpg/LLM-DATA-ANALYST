@@ -17,7 +17,7 @@ st.markdown(
                 border-left:3px solid #6c63ff; border-radius:4px; margin:0.5rem 0 1.5rem 0;">
     <strong>Created by:</strong> Festus Amutenya (220006245) · Kennedy Hauwanga (218205299)<br>
     <strong>Module:</strong> Large Language Models &nbsp;|&nbsp;
-    <strong>Institution:</strong> UNIVERSITY OF NAMIBIA
+    <strong>Institution:</strong> University of Namibia
     </div>
     """,
     unsafe_allow_html=True,
