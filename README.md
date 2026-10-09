@@ -1,9 +1,5 @@
 # LLM DATA ANALYST
 
-An LLM-powered data analyst: upload a CSV, ask a question, get code + charts + explanation.
-
-##  Overview
-
 This project leverages the power of Large Language Models (LLMs) to democratize data analysis. Instead of writing complex code manually, users can simply upload a dataset in CSV format and ask questions in natural language. The system automatically generates the necessary Python code, executes it, and returns the results as visual charts and clear text explanations.
 
 ##  Features
