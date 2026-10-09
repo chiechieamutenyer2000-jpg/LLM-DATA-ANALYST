@@ -124,7 +124,7 @@ def sample_df():
 # ------------------------------------------------------------------
 # UI
 # ------------------------------------------------------------------
-st.title("📊 LLM Data Analyst")
+st.title(" LLM Data Analyst")
 st.caption("Upload a CSV, ask a question in plain English, and let the LLM plan, code, run, and explain the analysis.")
 
 if not GROQ_KEY:
@@ -133,7 +133,7 @@ if not GROQ_KEY:
 
 # --- Ethics & Safeguards panel (visible evidence for the report) ---
 with st.sidebar:
-    st.header("🛡️ Ethics & Safeguards")
+    st.header(" Ethics & Safeguards")
     with st.expander("View safeguards", expanded=False):
         st.markdown(
             "**Privacy**  \n"
@@ -179,7 +179,7 @@ with st.expander(f"Preview — {df.shape[0]} rows × {df.shape[1]} cols"):
 
 st.subheader("2. Ask a question")
 q = st.text_input("Question", placeholder="Which region generated the most revenue?")
-run = st.button("🚀 Analyse", type="primary", disabled=not q)
+run = st.button(" Analyse", type="primary", disabled=not q)
 
 if run:
     st.subheader("3. Analysis")
@@ -190,15 +190,15 @@ if run:
             st.error(f"LLM call failed: {e}")
             st.stop()
 
-    st.markdown("#### 🧭 Plan")
+    st.markdown("####  Plan")
     st.markdown(plan)
     if attempts > 1:
-        st.info(f"🔁 Self-repair used: {attempts-1} retry attempt(s).")
+        st.info(f" Self-repair used: {attempts-1} retry attempt(s).")
 
-    with st.expander("🐍 Generated code", expanded=True):
+    with st.expander(" Generated code", expanded=True):
         st.code(code, language="python")
 
-    st.markdown("#### 📈 Results")
+    st.markdown("####  Results")
     if out.strip():
         st.text(out)
     for f in figs:
@@ -206,7 +206,7 @@ if run:
     if res is not None:
         st.success(f"**Key result:** {res}")
 
-    st.markdown("#### 🗣️ Explanation")
+    st.markdown("####  Explanation")
     with st.spinner("Explaining…"):
         try:
             exp = call_llm([{"role":"system","content":EXPLAIN_PROMPT},
@@ -216,10 +216,10 @@ if run:
         except Exception as e:
             st.warning(f"Explanation failed: {e}")
 
-    st.markdown("#### 📚 Sources & Provenance")
+    st.markdown("####  Sources & Provenance")
     st.markdown(f"- Dataset: `{st.session_state.get('src','?')}`\n"
                 f"- Loaded: {st.session_state.get('t','?')}\n"
                 f"- Shape: {df.shape[0]} × {df.shape[1]}\n"
                 f"- Model: `{MODEL}` via Groq\n"
                 f"- Generated: {datetime.datetime.now().isoformat(timespec='seconds')}")
-    st.caption("⚠️ LLM-generated code can be wrong. Verify numbers before trusting them.")
+    st.caption(" LLM-generated code can be wrong. Verify numbers before trusting them.")
